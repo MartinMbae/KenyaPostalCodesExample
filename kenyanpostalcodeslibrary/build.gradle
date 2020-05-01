@@ -1,4 +1,31 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext {
+    bintrayRepo = 'KenyanPostalCodes' // Repo name in bintray dashboard
+    bintrayName = 'studios.luxurious.kenyanpostalcodes' // package name of the bintray repo
+
+    publishedGroupId = 'com.martinmbae.kenyan.postalcodes'   // this is the ID we want to see in implementation line
+    libraryName = 'kenyanpostalcodeslibrary'     // this is the module name of library
+    artifact = 'library'        // this is the artifact we want to see in implementation line
+
+    libraryDescription = 'An android library that displays all postal codes in kenya for selection.' // description of library
+
+    siteUrl = 'https://github.com/MartinMbae/KenyaPostalCodesExample'    // git repo url
+    gitUrl = 'https://github.com/MartinMbae/KenyaPostalCodesExample.git' // git repo vcs url
+
+    libraryVersion = '1.0.1'      // library version
+
+    developerId = 'martinmbae'                // This is your bintray username
+    developerName = 'Martin Mbae'              // Developer's name
+    developerEmail = 'martinmbae.codemaster@gmail.com'                // Developer's email
+
+    licenseName = 'The Apache Software License, Version 2.0'  // for example, The Apache Software License, Version 2.0
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'   // for example, http://www.apache.org/licenses/LICENSE-2.0.txt
+    allLicenses = ["Apache-2.0"]    // array of licenses, for example, ["Apache-2.0"]
+}
+
+
 
 android {
     compileSdkVersion 29
@@ -31,3 +58,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
+apply from: 'publish.gradle'
