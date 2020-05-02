@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/MartinMbae/KenyaPostalCodesExample'    // git repo url
     gitUrl = 'https://github.com/MartinMbae/KenyaPostalCodesExample.git' // git repo vcs url
 
-    libraryVersion = '1.0.1'      // library version
+    libraryVersion = '1.0.2'      // library version
 
     developerId = 'martinmbae'                // This is your bintray username
     developerName = 'Martin Mbae'              // Developer's name
