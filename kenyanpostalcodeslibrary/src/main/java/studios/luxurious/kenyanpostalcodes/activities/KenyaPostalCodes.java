@@ -34,7 +34,7 @@ public class KenyaPostalCodes extends AppCompatActivity {
 
         final ArrayList<PostalArea> postalAreas = new ArrayList<>();
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         BufferedReader br = null;
         try {
             br = new BufferedReader(new InputStreamReader(context.getAssets().open(
@@ -46,6 +46,7 @@ public class KenyaPostalCodes extends AppCompatActivity {
             e.printStackTrace();
         } finally {
             try {
+                assert br != null;
                 br.close(); // stop reading
             } catch (IOException e) {
                 e.printStackTrace();
