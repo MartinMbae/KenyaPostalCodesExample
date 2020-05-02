@@ -21,9 +21,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sortByName(View view) {
-        KenyaPostalCodes.showAllPostalAreas(MainActivity.this, true,"Show Post Codes", new PostalAreaSelected() {
+        KenyaPostalCodes.showAllPostalAreas(MainActivity.this,
+                true,
+                "Show Post Codes",
+                new PostalAreaSelected() {
             @Override
             public void OnPostalAreaSelected(PostalArea selectedPostalArea) {
+
+                String name =  selectedPostalArea.getAreaName();
+                String code = selectedPostalArea.getAreaCode();
                 Toast.makeText(MainActivity.this, "You've selected "+ selectedPostalArea.getAreaName(), Toast.LENGTH_SHORT).show();
             }
         });
