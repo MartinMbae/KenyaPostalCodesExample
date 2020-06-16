@@ -15,7 +15,7 @@ The library has;
 Add this library to your dependencies
 
 ```bash
-    implementation 'com.martinmbae.kenyan.postalcodes:library:1.0.2'
+    implementation 'com.martinmbae.kenyan.postalcodes:library:1.0.4'
 ```
 
 ## Usage
